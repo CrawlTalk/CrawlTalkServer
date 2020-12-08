@@ -12,7 +12,10 @@ func databaseInit() {
 		panic("failed to connect database")
 	}
 
-	db.AutoMigrate(&UserT{}, &FlowT{}, &MessageT{})
+	err = db.AutoMigrate(&UserT{}, &FlowT{}, &MessageT{})
+	if err != nil {
+		panic("failed to migrate database")
+	}
 	db.Create(&UserT{Uuid: 42, Login: "admin", Password: "admin"})
 
 }
