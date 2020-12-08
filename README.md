@@ -7,10 +7,11 @@
 ## Используемые инструменты
 
 * Go 1.15.6 (https://golang.org/)
-* CRM reform 1.5.0 (https://github.com/go-reform/reform)
+* ORM GORM (https://gorm.io/)
 
 ## Установка зависимостей
-go get -v gopkg.in/reform.v1/...
+go get -u gorm.io/gorm
+go get -u gorm.io/driver/sqlite
 
 
 [MoreliaTalk]: https://github.com/MoreliaTalk
